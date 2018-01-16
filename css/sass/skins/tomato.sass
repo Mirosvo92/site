@@ -1,0 +1,126 @@
+@import "../bourbon/bourbon"
+
+$color: #FF6347 //Theme skin
+$text_color: #888
+$main_color: #222
+$bg_light: #FAFAFA
+
+@mixin kerning($kerning)
+	letter-spacing: $kerning + px
+
+body
+	color: $main_color
+	+kerning(1)
+
+a
+	color: $color
+
+p,
+body .my_foter
+	color: $text_color
+
+.color_element
+	color: $color
+
+.color_bg
+
+	background-color: $color
+.color_border
+	border-color: $color
+
+.main_color_bg
+	background-color: $main_color
+
+.toggle_mnu
+	background-color: $main_color
+
+.bg_light
+	background-color: $bg_light
+
+.bg_dark
+	background-color: $main_color
+	color: #fff
+	.s_description::after
+		background-color: #FFF
+		
+.top_nmu
+	a:hover
+		color: $color
+		+kerning(4)
+
+
+
+.s_description
+	+kerning(5)
+	&::after
+		background-color: $main_color
+		
+	
+.resume_container
+	h3
+		color: $main_color
+		+kerning(1)
+		font-size: 16px
+		font-weight: 400
+	.left .rezume_disk strong
+		margin-left: 10px
+	.right .rezume_disk strong
+		margin-right: 10px
+
+
+.resume_item
+	.year
+		background-color: $color
+		color: #fff
+		font-weight: 600
+		font-style: italic
+
+.rezume_disk
+	+kerning(2)
+	
+	
+.resume_container p:nth-child(even)
+	color: #000000
+	
+
+.s_portfolio
+	li
+		color: $text_color
+		+kerning(2)
+	li.active
+		color: #fff
+		border-bottom: 1px solid $color
+		
+.port_item_cont
+	a
+		border-color: #87CEEB
+		color: #87CEEB
+		
+		
+.main_form
+	text-align: center
+	
+#cname-error,
+#cemail-error,
+#ccomment-error
+	color: #87CEEB
+	
+form
+	input:focus,
+	textarea:focus
+		border: 1px solid $color
+	input,
+		color: #888
+	textarea
+		+kerning(2)
+	button
+		background-color: #87CEEB
+		+kerning(2)
+	.form-group
+		+kerning(2)
+		color: $text_color
+#cname,
+#cemail,
+#ccomment
+	color: #888
+	
